@@ -20,7 +20,7 @@
         <%@list_words.each do |word|%>
           <h4><a href="/words/<%= word.id%>"><%= word.key%></a></h4>
         <% end %>
-        <form action="/" method="post">
+        <form action="/list" method="post">
         <button type="submit" class="btn-info">Clear List</button>
         </form>
       </div>
