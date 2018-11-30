@@ -28,5 +28,4 @@ class Word
       end
     end
   end
-
 end

@@ -1,20 +1,27 @@
-<h2>Word Definer</h2>
-
-<form action="/" method="post">
-  <div class="form-group">
-    <label for="key">Word</label>
-    <input id="key" name="key" class="form-control" type="text">
+<div class="main">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Word Definer</h3>
+      <form action="/" method="post">
+        <div class="form-group">
+          <label for="key">Word</label>
+          <input id="key" name="key" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="definition">Definition</label>
+          <input id="definition" name="definition" class="form-control" type="text">
+        </div>
+        <button type="submit" class="btn-info">Enter</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <div class="word_list">
+        <h3>List of Words</h3>
+        <%@list_words.each do |word|%>
+          <h4><a href="/words/<%= word.id%>"><%= word.key%></a></h4>
+        <% end %>
+        <button type="submit" class="btn-info">Clear List</button>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="definition">Definition</label>
-    <input id="definition" name="definition" class="form-control" type="text">
-  </div>
-  <button type="submit" class="btn-info">Enter</button>
-</form>
-
-
-<div class="word_list">
-  <%@list_words.each do |word|%>
-    <h4><a href="/words/<%= word.id%>"><%= word.key%></a></h4>
-  <% end %>
 </div>

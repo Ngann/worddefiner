@@ -29,13 +29,25 @@ describe("Word") do
     end
   end
 
-  describe("#id")
+  describe("#id") do
     it("increments the id by 1 each time a word is created") do
       word = Word.new({:key=> "Apropos"})
       word.save()
-      word2 = Word.new({:key=> "Apropos"})
+      word2 = Word.new({:key=> "Props"})
       word2.save()
       expect(word.id()).to(eq(1))
       expect(word2.id()).to(eq(2))
     end
+  end
+
+  describe(".find") do
+    it("finds a word base on its id") do
+      word = Word.new({:key=> "Apropos"})
+      word.save()
+      word2 = Word.new({:key=> "Props"})
+      word2.save()
+      expect(Word.find(1)).to(eq(word))
+      expect(Word.find(2)).to(eq(word2))
+    end
+  end
 end
