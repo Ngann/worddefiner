@@ -2,8 +2,19 @@
 
 <form action="/" method="post">
   <div class="form-group">
-    <label for="word">Type Word</label>
-    <input id="word" name="word" class="form-control" type="text">
+    <label for="key">Word</label>
+    <input id="key" name="key" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="definition">Definition</label>
+    <input id="definition" name="definition" class="form-control" type="text">
   </div>
   <button type="submit" class="btn-info">Enter</button>
 </form>
+
+
+<div class="word_list">
+  <%@list_words.each do |key|%>
+    <h4><a href="/words/<%= key.id%>"><%= key.definition%></a></h4>
+  <% end %>
+</div>
