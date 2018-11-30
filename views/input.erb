@@ -14,7 +14,7 @@
 
 
 <div class="word_list">
-  <%@list_words.each do |key|%>
-    <h4><a href="/words/<%= key.id%>"><%= key.definition%></a></h4>
+  <%@list_words.each do |word|%>
+    <h4><a href="/words/<%= word.id%>"><%= word.key%></a></h4>
   <% end %>
 </div>
