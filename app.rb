@@ -14,6 +14,12 @@ get('/words/:id') do
   erb(:output)
 end
 
+get('/definition') do
+  @definition_two = params[:definition_two]
+  erb(:definition)
+end
+
+
 post('/') do
   word = Word.new(params)
   @key = params[:key]

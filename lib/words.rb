@@ -1,11 +1,20 @@
+
 class Word
   @@list_words = []
-  attr_reader :key, :definition, :id
+  @@list_definition = []
+  attr_reader :key, :definition, :id, :definition_two 
 
   def initialize(attributes)
     @key = attributes[:key]
     @definition = attributes[:definition]
+    @definition_two = attributes[:definition_two]
     @id = @@list_words.length + 1
+  end
+
+  def add_definition
+    definition_add = Hash.new()
+    @@list_definition.push(definition_add)
+
   end
 
   def save()
