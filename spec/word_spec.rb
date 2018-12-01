@@ -51,3 +51,7 @@ describe("Word") do
     end
   end
 end
+# 
+# word = Word.new({:key=> "Pops"})
+# word.save()
+# Word.find(1).add_def("test")

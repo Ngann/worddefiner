@@ -10,7 +10,9 @@ get('/') do
 end
 
 get('/words/:id') do
-  @word = Word.find(params[:id])
+  @word = Word.find(params[:id]
+  @definition_two = params[:definition_two]
+  @word.add_def(@definition_two)
   erb(:output)
 end
 
