@@ -50,8 +50,24 @@ describe("Word") do
       expect(Word.find(2)).to(eq(word2))
     end
   end
+
+  describe("#add_def") do
+    it("adds additional definition to an array") do
+      word = Word.new({:key=> "Apropos",:definition=>"of the times"})
+      word.save()
+      word = Word.new({:key=> "Pops", :definition=>"soda, dads"})
+      word.save()
+      Word.find(1).add_def("test")
+      Word.find(1).add_def("second def")
+      Word.find(2).add_def("aaaaaa")
+      Word.find(2).add_def("bbbb")
+      expect(Word.find(1).definition_array).to(eq(["test", "second def"]))
+      expect(Word.find(2).definition_array).to(eq(["aaaaaa", "bbbb"]))
+    end
+  end
+
 end
-# 
+#
 # word = Word.new({:key=> "Pops"})
 # word.save()
 # Word.find(1).add_def("test")

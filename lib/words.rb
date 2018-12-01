@@ -32,10 +32,27 @@ class Word
     end
   end
 
+  def self.update(id)
+    word_id = id.to_i()
+    @@list_words.each do |word|
+      if word.id == word_id
+        word.add_def
+      end
+    end
+  end
+
   def add_def(string)
     @definition_two = string
     @definition_array.push(@definition_two)
-    # Word.find(1).add_def
   end
-
 end
+# word = Word.new({:key=> "Apropos",:definition=>"of the times"})
+# word.save()
+# word = Word.new({:key=> "Pops", :definition=>"soda , dads"})
+# word.save()
+# Word.find(1).add_def("test")
+# Word.find(1).add_def("second def")
+# Word.find(2).add_def("aaaaaa")
+# Word.find(2).add_def("bbbb")
+# Word.all
+# Word.find(1).definition_array

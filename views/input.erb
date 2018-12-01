@@ -12,8 +12,12 @@
           <input id="definition" name="definition" class="form-control" type="text">
         </div>
         <div class="form-group">
-          <label for="definition_array">Definition Array</label>
-          <input id="definition_array" name="definition_array" class="form-control" type="text">
+          <label for="definition_two">Another Definition</label>
+          <input id="definition_two" name="definition_two" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+          <label for="definition_three">Another Definition</label>
+          <input id="definition_three" name="definition_three" class="form-control" type="text">
         </div>
         <button type="submit" class="btn-info">Enter</button>
       </form>
@@ -22,7 +26,7 @@
       <div class="word_list">
         <h3>List of Words</h3>
         <%@list_words.each do |word|%>
-          <h4><a href="/words/<%= word.id%>"><%= word.key%></a></h4>
+          <h4><a href="/words/<%= word.id%>"><%= word.key%>: <%= word.definition%> :<%= word.definition_array%></a></h4>
         <% end %>
         <form action="/list" method="post">
         <button type="submit" class="btn-info">Clear List</button>
