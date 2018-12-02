@@ -7,6 +7,13 @@
 <p><%=definition%><p>
 <% end %>
 
+<form action="/update/<%= @word.id %>" method="POST">
+  <div class="form-group">
+    <label for="definition_two">Add Additional Definition</label>
+    <input id="definition_two" name="definition_two" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn-info">Add Definition</button>
+</form>
 
 <div class="home">
   <a href="/">Back</a>
