@@ -1,0 +1,10 @@
+<%@list_words.each do |word|%>
+  <h4><a href="/words/<%= word.id%>"><%= word.key%></a></h4>
+  <form action="/words/<%= word.id %>" method="POST">
+    <div class="form-group">
+      <label for="definition_two">Add Additional Definition</label>
+      <input id="definition_two" name="definition_two" class="form-control" type="text">
+    </div>
+    <button type="submit" class="btn-info">Add Definition</button>
+  </form>
+<% end %>

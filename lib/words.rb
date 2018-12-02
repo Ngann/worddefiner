@@ -32,15 +32,6 @@ class Word
     end
   end
 
-  def self.update(id)
-    word_id = id.to_i()
-    @@list_words.each do |word|
-      if word.id == word_id
-        word.add_def
-      end
-    end
-  end
-
   def add_def(string)
     @definition_two = string
     @definition_array.push(@definition_two)

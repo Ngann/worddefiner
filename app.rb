@@ -14,6 +14,13 @@ get('/words/:id') do
   erb(:output)
 end
 
+post('/words/:id') do
+  @word = Word.find(params[:id])
+  @definition_two = params[:definition_two]
+  @word.add_def(@definition_two)
+  erb(:output)
+end
+
 post('/') do
   word = Word.new(params)
   @key = params[:key]
@@ -31,6 +38,7 @@ post('/list') do
   Word.clear()
   redirect to('/')
 end
+
 #
 # get('/definition') do
 #   @word = Word.find(params[:id])
