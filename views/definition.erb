@@ -1,4 +1,12 @@
-<h4><%= @definition_two %></h4>
+<h3><%= @list_words %></h3>
+<h3><%= @word.key %></h3>
+<h3><% @word.id %></h3>
+<h4><%= @word.definition %></h4>
+
+<h5>Additional Definitions</h5>
+<%@word.definition_array.each do |definition|%>
+<p><%=definition%><p>
+<% end %>
 
 <div class="home">
   <a href="/">Back</a>

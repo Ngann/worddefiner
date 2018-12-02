@@ -47,3 +47,4 @@ end
 # Word.find(2).add_def("bbbb")
 # Word.all
 # Word.find(1).definition_array
+# Word.find(1).definition_array[0]

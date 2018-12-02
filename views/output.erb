@@ -1,14 +1,13 @@
 <h3><%= @word.key %></h3>
 <h3><% @word.id %></h3>
 <h4><%= @word.definition %></h4>
-<h4><%= @word.definition_array[0] %></h4>
-<h4><%= @word.definition_array[1] %></h4>
-<h4><%= @word.definition_array[2] %></h4>
-<h4><%= @word.definition_array[3] %></h4>
-<h4><%= @word.definition_array[4] %></h4>
+
+<h5>Additional Definitions</h5>
+<%@word.definition_array.each do |definition|%>
+<p><%=definition%><p>
+<% end %>
 
 
-<h4><%= @definition_two %></h4>
 <div class="home">
   <a href="/">Back</a>
 </div>
