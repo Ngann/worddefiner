@@ -65,9 +65,4 @@ describe("Word") do
       expect(Word.find(2).definition_array).to(eq(["aaaaaa", "bbbb"]))
     end
   end
-
 end
-#
-# word = Word.new({:key=> "Pops"})
-# word.save()
-# Word.find(1).add_def("test")

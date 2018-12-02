@@ -1,12 +1,12 @@
 # Word Definer
 
-#### Week two Ruby project with Sinatra
+#### Week two Ruby project with Sinatra.
 
 #### By Ngan Nguyen
 
 ## Description
 
-Project was created using Ruby using the Sinatra framework. The site was deployed in Heroku, with link below.
+Project was created using Ruby and Sinatra framework. The site was deployed in Heroku, with link below.
 
 https://lit-castle-43629.herokuapp.com/
 
@@ -26,4 +26,4 @@ https://lit-castle-43629.herokuapp.com/
 
 MIT license
 
-Copyright (c) 2018 **_Ngan Nguyen}_**
+Copyright (c) 2018 **_Ngan Nguyen_**
